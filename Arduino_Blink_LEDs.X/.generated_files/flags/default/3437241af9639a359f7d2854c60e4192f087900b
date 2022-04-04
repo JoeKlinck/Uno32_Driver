@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -D_SUPPRESS_PLIB_WARNING   -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  C:\Users\jtkli\Documents\Work\Software\Git\Uno32_Driver\Arduino_Blink_LEDs.X\Arduino_Blink_LEDs.c
