@@ -84,6 +84,6 @@ void Timer1_Init(void)
     T1CON=0X8070;
     IFS0bits.T1IF=0;
     IEC0bits.T1IE=1;
-    PR1=4000;
+    PR1=4500;//4000
     TMR1=0;
 }
