@@ -32,7 +32,16 @@ void Timer1_Init(void);
 enum{led_off, led_on};
 unsigned char led_flag,a,b,c,d,e;
 unsigned int i,ii;
-enum week{Mon, Tue, Wed, Thur, Fri, Sat, Sun};
+enum week
+{
+    Mon, 
+    Tue, 
+    Wed, 
+    Thur, 
+    Fri, 
+    Sat, 
+    Sun
+};
 enum week day;
 typedef unsigned int Uint_32;
 typedef unsigned short Ushort_16;
@@ -84,6 +93,6 @@ void Timer1_Init(void)
     T1CON=0X8070;
     IFS0bits.T1IF=0;
     IEC0bits.T1IE=1;
-    PR1=3500;
+    PR1=4500;//4000
     TMR1=0;
 }
