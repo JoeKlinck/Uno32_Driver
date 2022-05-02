@@ -29,10 +29,20 @@ LED 4 and LED 5
 #define LED4 LATGbits.LATG6
 #define LED5 LATFbits.LATF0
 void Timer1_Init(void);
+void test_function(void);
 enum{led_off, led_on};
 unsigned char led_flag,a,b,c,d,e;
 unsigned int i,ii;
-enum week{Mon, Tue, Wed, Thur, Fri, Sat, Sun};
+enum week
+{
+    Mon, 
+    Tue, 
+    Wed, 
+    Thur, 
+    Fri, 
+    Sat, 
+    Sun
+};
 enum week day;
 typedef unsigned int Uint_32;
 typedef unsigned short Ushort_16;
@@ -61,11 +71,7 @@ int main(void)
     r=8;
     while(1)
     {
-        day = Wed;
-        day = Fri;
-        day = Sat;
-        day = Sun;
-        i=day;
+        test_function();
     }
     Timer1_Init();
     while(1);
@@ -84,6 +90,13 @@ void Timer1_Init(void)
     T1CON=0X8070;
     IFS0bits.T1IF=0;
     IEC0bits.T1IE=1;
-    PR1=4000;
+    PR1=4500;//4000
     TMR1=0;
+}
+void test_function(void)
+{
+    unsigned char test_fun_x = 0;
+    unsigned char test_fun_y = 0;
+    test_fun_y=45;
+    test_fun_x=3;  
 }
